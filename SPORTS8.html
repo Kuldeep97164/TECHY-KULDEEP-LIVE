@@ -35,17 +35,21 @@ if (confirm("Join Our Telegram Channel To Watch Live Match")) {
 <div id="jwplayerDiv"></div>  
 <script type="text/javascript">    
 jwplayer("jwplayerDiv").setup({    
-     file: "https://abfdm2saaaaaaaamljqrv7ybrrx7h.47348d5020154bfaac6dd4418cd23c5d.emt.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/rdznpzcmct/out/v1/355324ed98a94cbebbaff4bad0cd28ce/cenc.mpd", 
          position: 'bottom',  
         "autostart": true,
         "Volume": "100",
         "mute": false,
         "stretching": "exactfit",
         "width": "100%", 
-      type: "dash",    
-      drm: { "clearkey": {    
-               "keyId": "ae26845bd33038a9c0774a0981007294",    
-              "key": "63ac662dde310cfb4cc6f9b43b34196d" 
+      type: "dash", 
+    
+      file: "https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/output/index.mpd?__hdnea__=st=1756950507~exp=1757036907~acl=/*~hmac=4a064be4d3e331c77b443c940c0c18362a21c444ee3cb7321caaeb84b2ba46c3",
+        drm: {
+            clearkey: {
+                keyId: "965dc2ddb1d85138ad787999a7f30ca5",
+                key: "859695076e67fe961836b564db6d689c"
+                
+
             }   
              }               
 });   
