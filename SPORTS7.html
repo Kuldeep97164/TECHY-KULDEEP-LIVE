@@ -32,21 +32,55 @@ if (confirm("Join Our Telegram Channel To Watch Live Match")) {
   </style>  
 </head>  
 <body>  
-<div id="jwplayerDiv"></div>  
-<script type="text/javascript">    
-jwplayer("jwplayerDiv").setup({    
-     file: "https://abfdm2saaaaaaaamljqrv7ybrrx7h.47348d5020154bfaac6dd4418cd23c5d.emt.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/rdznpzcmct/out/v1/355324ed98a94cbebbaff4bad0cd28ce/cenc.mpd", 
-         position: 'bottom',  
-        "autostart": true,
-        "Volume": "100",
-        "mute": false,
-        "stretching": "exactfit",
-        "width": "100%", 
-      type: "dash",    
-      drm: { "clearkey": {    
-               "keyId": "ae26845bd33038a9c0774a0981007294",    
-              "key": "63ac662dde310cfb4cc6f9b43b34196d" 
-            }   
-             }               
-});   
+<div id="player"></div>
+
+<script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+<script>
+jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+
+// Patch XHR to inject token into segments
+(function() {
+    const origOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(method, url) {
+        if (url && !url.includes("__hdnea__")) {
+            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1756950507~exp=1757036907~acl=/*~hmac=4a064be4d3e331c77b443c940c0c18362a21c444ee3cb7321caaeb84b2ba46c3";
+        }
+        return origOpen.apply(this, arguments);
+    };
+})();
+
+jwplayer("player").setup({
+    playlist: [{
+        title: "Star Sports 1 HD",
+        image: "https://img.media.jio.com/tvpimages/76/32/301981_1749665664018_l_medium.jpg",
+        file: "https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/output/index.mpd?__hdnea__=st=1756950507~exp=1757036907~acl=/*~hmac=4a064be4d3e331c77b443c940c0c18362a21c444ee3cb7321caaeb84b2ba46c3",
+        drm: {
+            clearkey: {
+                keyId: "965dc2ddb1d85138ad787999a7f30ca5",
+                key: "859695076e67fe961836b564db6d689c",
+                robustness: {
+                    video: "SW_SECURE_DECODE",
+                    audio: "SW_SECURE_DECODE"
+                }
+            }
+        }
+    }],
+    width: "100%",
+    height: "100%",
+    autostart: true,
+    mute: false,
+    primary: "html5",
+    hlshtml: true,
+    aspectratio: "16:9",
+    stretching: "uniform",
+    playbackRateControls: true,
+    controls: true,
+     skin: { name: "default", active: "red", inactive: "white", background: "black" },
+}).on("error", e => {
+    console.error("Player error:", e);
+    const msg = document.createElement('div');
+    msg.id = "message";
+    msg.innerText = "Player error: " + (e.message || "Unknown error");
+    document.body.appendChild(msg);
+});
 </script>
