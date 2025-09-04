@@ -40,11 +40,7 @@
 </head>
 <body>
 <div id="player"></div>
-<script>
-if (confirm("Join Our Telegram Channel To Watch Live Match")) {
-    window.location.href = "https://t.me/IPTV_INDIA_3";
-  }
-</script>
+
 <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
 <script>
 jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
@@ -54,7 +50,7 @@ jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
     const origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function(method, url) {
         if (url && !url.includes("__hdnea__")) {
-            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1756944032~exp=1757030432~acl=/*~hmac=7de5083cfe0cd86c5fff1069a52702b6c58bf4a0a61205eb10f3d2d9b29dfca";
+            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1756950507~exp=1757036907~acl=/*~hmac=4a064be4d3e331c77b443c940c0c18362a21c444ee3cb7321caaeb84b2ba46c3";
         }
         return origOpen.apply(this, arguments);
     };
@@ -64,16 +60,16 @@ jwplayer("player").setup({
     playlist: [{
         title: "Star Sports 1",
         image: "https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1.png",
-        file: " https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/output/index.mpd?__hdnea__=st=1756944032~exp=1757030432~acl=/*~hmac=7de5083cfe0cd86c5fff1069a52702b6c58bf4a0a61205eb10f3d2d9b29dfca",
+        file: "https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_1_BTS/output/index.mpd?__hdnea__=st=1756950507~exp=1757036907~acl=/*~hmac=4a064be4d3e331c77b443c940c0c18362a21c444ee3cb7321caaeb84b2ba46c3",
         drm: {
             clearkey: {
-                keyId: "965dc2ddb1d85138ad787999a7f30ca5",
-                key: "859695076e67fe961836b564db6d689c",
+                keyId: "df20894ec30954d3b28097c138f4cfda",
+                key: "ff9b6292b1cddbd11a046029cb314634",
                 robustness: {
                     video: "SW_SECURE_DECODE",
                     audio: "SW_SECURE_DECODE"
                 }
-            }            
+            }
         }
     }],
     width: "100%",
@@ -98,3 +94,4 @@ jwplayer("player").setup({
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e15b99cd804a427f9b0db52f398ab880","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
