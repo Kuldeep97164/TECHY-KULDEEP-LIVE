@@ -43,7 +43,7 @@ jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
     const origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function(method, url) {
         if (url && !url.includes("__hdnea__")) {
-            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1757319169~exp=1757405569~acl=/*~hmac=9da5bcb34ee27876af44e20f71c449b581a0bdbe2bd3d4cfd85d17730b226983";
+            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1757417397~exp=1757503797~acl=/*~hmac=c98cbacaa43b88b5fa1e7ef7b0cf52cb9abc7fef7b86045f28177fbb916d76e0";
         }
         return origOpen.apply(this, arguments);
     };
