@@ -31,5 +31,19 @@ if (confirm("Join Our Telegram Channel To Watch Live Match")) {
 <body>  
 <div id="jwplayerDiv"></div>  
 <script type="text/javascript">    
-document.write(unescape('jwplayer%28%22jwplayerDiv%22%29.setup%28%7B%20%20%20%20%0A%20%20%20%20%20file%3A%20%22https%3A//sundirectgo-live.pc.cdn.bitgravity.com/hd21/dth.mpd%22%2C%20%0A%20%20%20%20%20%20%20%20%20position%3A%20%27bottom%27%2C%20%20%0A%20%20%20%20%20%20%20%20%22autostart%22%3A%20true%2C%0A%20%20%20%20%20%20%20%20%22Volume%22%3A%20%22100%22%2C%0A%20%20%20%20%20%20%20%20%22mute%22%3A%20false%2C%0A%20%20%20%20%20%20%20%20%22stretching%22%3A%20%22exactfit%22%2C%0A%20%20%20%20%20%20%20%20%22width%22%3A%20%22100%25%22%2C%0A%20%20%20%20%20%20type%3A%20%22dash%22%2C%20%20%20%20%0A%20%20%20%20%20%20drm%3A%20%7B%20%22clearkey%22%3A%20%7B%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22keyId%22%3A%20%228268467a7a974698b18c9e63b13f73a4%22%2C%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22key%22%3A%20%226affb3ad6e781bc4afafad402e1d4510%22%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%7D%29%3B%20%20%20'));
+jwplayer("jwplayerDiv").setup({    
+     file: "https://sundirectgo-live.pc.cdn.bitgravity.com/hd21/dth.mpd", 
+         position: 'bottom',  
+        "autostart": true,
+        "Volume": "100",
+        "mute": false,
+        "stretching": "exactfit",
+        "width": "100%",
+      type: "dash",    
+      drm: { "clearkey": {    
+               "keyId": "8268467a7a974698b18c9e63b13f73a4",    
+              "key": "6affb3ad6e781bc4afafad402e1d4510" 
+            }  
+             }         
+});   
 </script>
