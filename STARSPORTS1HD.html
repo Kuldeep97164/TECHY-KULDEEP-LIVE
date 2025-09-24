@@ -43,7 +43,7 @@ jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
     const origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function(method, url) {
         if (url && !url.includes("__hdnea__")) {
-            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1758605143~exp=1758691543~acl=/*~hmac=8467680b8cf506e2f16043aa2890c32e0aa528e0a18887bf60595a717e3c7282";
+            url += (url.includes('?') ? '&' : '?') + "__hdnea__=st=1758697231~exp=1758783631~acl=/*~hmac=0bfe1f8b86efc44ea384d15326a99d561b2cf359c74c3ce3e3463406a8228450";
         }
         return origOpen.apply(this, arguments);
     };
@@ -51,7 +51,7 @@ jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 
 jwplayer("player").setup({
     playlist: [{
-        file: "https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/output/index.mpd?__hdnea__=st=1758605143~exp=1758691543~acl=/*~hmac=8467680b8cf506e2f16043aa2890c32e0aa528e0a18887bf60595a717e3c7282",
+        file: "https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/output/index.mpd?__hdnea__=st=1758697231~exp=1758783631~acl=/*~hmac=0bfe1f8b86efc44ea384d15326a99d561b2cf359c74c3ce3e3463406a8228450",
         drm: {
             clearkey: {
                 keyId: "965dc2ddb1d85138ad787999a7f30ca5",
